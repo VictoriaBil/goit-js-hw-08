@@ -13,4 +13,6 @@ function onPlay(data) {
   localStorage.setItem(STORAGE_KEY, data.seconds);
 }
 
-player.setCurrentTime(localStorage.getItem(STORAGE_KEY));
+if (localStorage.getItem(STORAGE_KEY)) {
+  player.setCurrentTime(localStorage.getItem(STORAGE_KEY));
+}

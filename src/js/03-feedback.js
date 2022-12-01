@@ -21,3 +21,14 @@ function onInput(event) {
   formData[event.target.name] = event.target.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
+
+console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
+
+function localStorageData() {
+  const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+  if (data) {
+    userEmail.value = data.email;
+    userMessage.value = data.message;
+  }
+}
