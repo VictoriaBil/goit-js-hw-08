@@ -24,6 +24,8 @@ function onInput(event) {
 
 console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
 
+localStorageData();
+
 function localStorageData() {
   const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
